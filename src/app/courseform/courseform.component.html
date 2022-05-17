@@ -1,0 +1,40 @@
+<form  >
+
+    <div class="form-group">
+
+    <label for="courseName">Course Name</label>
+    <input required minlength="3" 
+    ngModel name="courseName"
+    #courseName="ngModel"
+    id="courseName" 
+    type="text" 
+    class="form-control" 
+    (change)="logx(courseName)"
+    required
+    
+    > 
+
+    <div class="alert alert-danger" *ngIf="!courseName.valid && !courseName.untouched" >
+ 
+
+        <div *ngIf="courseName.errors?.['required']">Required</div>
+        <div *ngIf="courseName.errors?.['minlength']">Minimum length not present</div>
+
+    </div>
+   
+</div>
+<select name="mk" id="mk"><option value="Hello"></option>
+    <option value="Hi">,mndf m,b</option>
+    <option value="are">,msdng mfd</option>
+</select>
+
+
+
+    <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" id="category" class="form-control">
+    </div>
+    
+</form>
+<div></div>
+

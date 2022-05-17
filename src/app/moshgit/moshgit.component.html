@@ -1,0 +1,19 @@
+<ul class="list-group">
+    <li *ngFor="let follower of followers" class="list-group-item" >
+        
+        
+    <a [routerLink]=  "['/followers',follower.id,follower.login]" >
+        <img class="avatar" src="{{follower.avatar_url}}" > 
+    </a>
+    
+        <span>
+            <div>{{follower.login}}</div>
+            <div><a href="{{follower.html_url}}">{{follower.html_url}}</a></div>
+        </span>
+    
+    </li>
+</ul >
+<router-outlet></router-outlet>
+
+
+

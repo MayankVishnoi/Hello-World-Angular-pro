@@ -1,0 +1,9 @@
+<p>app-github-profile works!</p>
+<button class="btn btn-primary" (click)="onSubmit()">
+    button programmatic navigation
+</button>
+
+<li *ngFor="let follower of followers">{{follower.id}}</li>
+<button class="btn btn-primary" routerLink="/followers]" [queryParams]="{order:'2',page:'new'}" >
+    button html
+</button>

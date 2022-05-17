@@ -1,0 +1,12 @@
+<h1 class="mb-3" class="Header">
+  Home Page
+</h1>
+
+<ul>
+  
+  <li *ngFor="let arv of archives" >
+    <a [routerLink]="['/archive',arv.year,arv.month]">{{arv.year}}/{{arv.month}}</a>
+  </li>
+ 
+</ul>
+<router-outlet></router-outlet>
